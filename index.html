@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 Code Camp</title>
+
+<script src="jqtouch/jquery-1.4.2.min.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+<style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+<style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
+
+<style>
+
+body.fullscreen #home .info {
+  display: none;
+}
+
+#jqt ul.rounded li {
+  color: #fff;
+}
+
+#about {
+  padding: 10px 10px 40px;
+  text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
+  font-size: 13px;
+  text-align: center;
+  background: #161618;
+}
+
+#about p {
+  margin-bottom: 8px;
+}
+
+#about a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+</style>
+
+
+<script type="text/javascript" charset="utf-8">
+var jQT = new $.jQTouch({
+    icon: 'framsia_logo_square_yellow.png',
+    icon4: 'framsia_logo_square_yellow_2x.png',
+    statusBar: 'black',
+    preloadImages: []
+});
+
+$(function(){
+  // Orientation callback event
+  $('body').bind('turn', function(e, data){
+    $('#orient').html('Orientation: ' + data.orientation);
+  });
+
+});
+</script>
+
+</head>
+<body>
+
+<div id="jqt">
+
+<div id="about">
+  <p><strong>HTML5</strong></p>
+  <p>The HTML 5 code camp is arranged by:</p>
+  <p><a href="http://cantara.no" target="_blank"><img src="cantara.jpg" /></a></p>
+  <p>and</p>
+  <p><a href="http://meetup.com/framsia" target="_blank"><img src="framsia.jpg" /></a></p>
+  <p>App by: <a href="http://twitter.com/gregersrygg">@gregersrygg</a></p>
+  <p><br><br><a href="#" class="grayButton goback">Close</a></p>
+</div>
+
+<div id="home" class="current">
+  <div class="toolbar">
+    <h1>HTML5 Code Camp</h1>
+    <a class="button flip" id="infoButton" href="#about">About</a>
+  </div>
+
+  <h2>Schedule</h2>
+  <ul class="rounded">
+  <li class="arrow"><a href="#friday">Friday</a></li>
+  <li class="arrow"><a href="#saturday">Saturday</a></li>
+  <li class="arrow"><a href="#sunday">Sunday</a></li>
+  </ul>
+
+  <h2>Sponsor</h2>
+  <ul class="rounded">
+    <li class="forward"><a href="http://goo.gl/Y2kt" target="_blank"><br/><img src="finn_logo_25.png" /> Jobbe hos FINN.no?</a></li>
+  </ul>
+</div>
+
+<div id="friday">
+  <div class="toolbar">
+    <h1>Friday</h1>
+    <a class="back" href="#home">Home</a>
+  </div>
+
+  <ul class="rounded">
+  <li>19:00 - Welcome - The world today!</li>
+  <li>20:00 - Dinner</li>
+  </ul>
+</div>
+
+<div id="saturday">
+  <div class="toolbar">
+    <h1>Saturday</h1>
+    <a class="back" href="#home">Home</a>
+  </div>
+
+  <ul class="rounded">
+  <li>08:00 - Breakfast</li>
+  <li>09:00 - Why HTML5?</li>
+  <li>09:20 - Meet the new semantics</li>
+  <li>10:00 - Code session</li>
+  <li>11:00 - Forms</li>
+  <li>11:30 - Code session</li>
+  <li>12:30 - Lunch</li>
+  <li>13:30 - Audio / Video</li>
+  <li>14:00 - Code session</li>
+  <li>14:30 - The Drag and Drop API</li>
+  <li>15:00 - File API</li>
+  <li>15:20 - Code session</li>
+  <li>16:30 - Canvas</li>
+  <li>17:15 - Coffee Break</li>
+  <li>17:30 - Code session</li>
+  <li>19:00 - End Saturday</li>
+  <li>20:00 - Dinner</li>
+  </ul>
+</div>
+
+<div id="sunday">
+  <div class="toolbar">
+    <h1>Sunday</h1>
+    <a class="back" href="#home">Home</a>
+  </div>
+
+  <ul class="rounded">
+  <li>13:00 - Lunch</li>
+  <li>16:30 - Coding Challenge Award</li>
+  <li>16:45 - Wrap-up and evaluation</li>
+  <li>17:15 - Depature</li>
+  </ul>
+</div>
+
+</div>
+
+</body>
+</html>
